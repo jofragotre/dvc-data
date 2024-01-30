@@ -4,7 +4,8 @@ from pydantic.dataclasses import dataclass
 
 @dataclass
 class Config:
-    helle: str = "world"
+    dvc_remote_name: str = "cybulde-data"
+    dvc_remote_url: str = "gdrive://1BM3pbLCrJ-MQRL92mT_ZC9tHDZH403ox"
 
 
 def setup_config() -> None:
