@@ -1,4 +1,4 @@
-from cybulde.utils.utils import run_shell_command, get_logger
+from .utils import run_shell_command, get_logger
 from pathlib import Path
 
 DATA_UTILS_LOGGER = get_logger(Path(__file__).name)

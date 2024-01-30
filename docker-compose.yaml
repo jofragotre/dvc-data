@@ -6,7 +6,7 @@ services:
     hostname: "${HOST_NAME:-tremoco}"
     image: dvc-data
     platform: linux/amd64
-    container_name: dvc-data-container
+    container_name: cybulde-data-container
     build:
       context: .
       dockerfile: ./docker/Dockerfile
@@ -19,7 +19,6 @@ services:
       - ~/.ssh:/home/${USER_NAME}/.ssh
     ports:
       - 8888:8888
-
     ipc: host
     init: true
 
