@@ -3,10 +3,10 @@ version: "3.8"
 services:
   app:
     user: "${USER_ID:-1000}"
-    hostname: "${HOST_NAME:-emkademy}"
-    image: cybulde-template
+    hostname: "${HOST_NAME:-tremoco}"
+    image: dvc-data
     platform: linux/amd64
-    container_name: cybulde-template-container
+    container_name: dvc-data-container
     build:
       context: .
       dockerfile: ./docker/Dockerfile
@@ -16,16 +16,10 @@ services:
     volumes:
       - ./:/app/
       - ~/.config/gcloud/:/home/${USER_NAME}/.config/gcloud
+      - ~/.ssh:/home/${USER_NAME}/.ssh
     ports:
-      - 8080:8080
+      - 8888:8888
 
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
     ipc: host
     init: true
 
