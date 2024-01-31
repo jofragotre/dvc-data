@@ -49,7 +49,7 @@ USER ${USER_NAME}
 RUN git config --global user.email "jofragotre@gmail.com" \
     && git config --global user.name "jofragotre"
 
-ENV GDRIVE_CREDENTIALS_DATA='{"access_token": "ya29.a0AfB_byAA8WQ4WBkvXp_L_ceEbR0N-AXUwVOutzXKvzulqfacIgid0lOtfr6JgVNIyVZ93GNqdG3fBdwIuG0bnWUA_W5nXtIKl-kJAn277ZTptmJqhMF-mbNGPjczt_-jg8cLp2-t332i-tzbX51E1jNqCyQfxymzAoD7-AaCgYKAfgSARMSFQHGX2MiNxbqWYoJjjCEGmtDbedaqg0173", "client_id": "710796635688-iivsgbgsb6uv1fap6635dhvuei09o66c.apps.googleusercontent.com", "client_secret": "a1Fz59uTpVNeG_VGuSKDLJXv", "refresh_token": "1//036BFqxnX4pbrCgYIARAAGAMSNwF-L9Irl4u_WyHQlSCxj7cmxynh41aEu-5ucbcKMVeu6fyA38hJMNuSp03wytM9J84cCA8St6Y", "token_expiry": "2024-01-31T17:36:08Z", "token_uri": "https://oauth2.googleapis.com/token", "user_agent": null, "revoke_uri": "https://oauth2.googleapis.com/revoke", "id_token": null, "id_token_jwt": null, "token_response": {"access_token": "ya29.a0AfB_byAA8WQ4WBkvXp_L_ceEbR0N-AXUwVOutzXKvzulqfacIgid0lOtfr6JgVNIyVZ93GNqdG3fBdwIuG0bnWUA_W5nXtIKl-kJAn277ZTptmJqhMF-mbNGPjczt_-jg8cLp2-t332i-tzbX51E1jNqCyQfxymzAoD7-AaCgYKAfgSARMSFQHGX2MiNxbqWYoJjjCEGmtDbedaqg0173", "expires_in": 3599, "scope": "https://www.googleapis.com/auth/drive.appdata https://www.googleapis.com/auth/drive", "token_type": "Bearer"}, "scopes": ["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.appdata"], "token_info_uri": "https://oauth2.googleapis.com/tokeninfo", "invalid": false, "_class": "OAuth2Credentials", "_module": "oauth2client.client"}'
+COPY ./docker/credentials/gdrive_credentials.json /app/gdrive_credentials.json
 
 COPY . /app/
 CMD ["/startup-script.sh"]
