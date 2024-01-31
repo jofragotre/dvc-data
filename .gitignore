@@ -136,4 +136,4 @@ dmypy.json
 .pyre/
 
 #Gdrive creds
-/gdrive_credentials.json
+*/gdrive_credentials.json
