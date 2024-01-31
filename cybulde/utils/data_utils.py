@@ -26,7 +26,6 @@ def initialize_dvc_storage(dvc_remote_name: str, dvc_remote_url: str) -> None:
     else:
         DATA_UTILS_LOGGER.info("DVC remote was already initialized...")
 
-
 def commit_to_dvc(dvc_raw_data_folder: str, dvc_remote_name: str) -> None:
     current_version = ""
     if not current_version:
