@@ -49,7 +49,5 @@ USER ${USER_NAME}
 RUN git config --global user.email "jofragotre@gmail.com" \
     && git config --global user.name "jofragotre"
 
-COPY ./docker/credentials/gdrive_credentials.json /app/gdrive_credentials.json
-
 COPY . /app/
 CMD ["/startup-script.sh"]

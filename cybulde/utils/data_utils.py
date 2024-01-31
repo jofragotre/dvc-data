@@ -21,7 +21,7 @@ def initialize_dvc_storage(dvc_remote_name: str, dvc_remote_url: str) -> None:
     if not run_shell_command("dvc remote list"):
         DATA_UTILS_LOGGER.info("Initializing remote storage")
         run_shell_command(f"dvc remote add -d {dvc_remote_name} {dvc_remote_url}")
-        run_shell_command(f"dvc remote modify {dvc_remote_name} --local gdrive_user_credentials_file ./gdrive_credentials.json")
+        run_shell_command(f"dvc remote modify {dvc_remote_name} --local gdrive_user_credentials_file ./docker/credentials/gdrive_credentials.json")
         run_shell_command("git add .dvc/config")
         run_shell_command(f"git commit -nm 'Configured remote storage @ {dvc_remote_url}'")
     else:
