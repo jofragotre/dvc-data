@@ -1,7 +1,3 @@
 [core]
     analytics = false
     autostage = true
-    remote = cybulde-data
-['remote "cybulde-data"']
-    url = gdrive://1BM3pbLCrJ-MQRL92mT_ZC9tHDZH403ox
-    gdrive_acknowledge_abuse = true
