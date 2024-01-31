@@ -10,4 +10,4 @@ def version_data(config: Config) -> None:
     commit_to_dvc(config.dvc_raw_data_folder, config.dvc_remote_name)
 
 if __name__ == "__main__":
-    version_data()  # type: ignore
+    version_data()   # type: ignore
