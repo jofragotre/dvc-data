@@ -50,11 +50,14 @@ def commit_to_dvc(dvc_raw_data_folder: str, dvc_remote_name: str) -> None:
 
 
 def make_new_data_version(dvc_raw_data_folder: str, dvc_remote_name: str) -> None:
+    DATA_UTILS_LOGGER.info("Make new data version")
     try:
+        DATA_UTILS_LOGGER.info(f"dvc status {dvc_raw_data_folder}.dvc")
         status = run_shell_command(f"dvc status {dvc_raw_data_folder}.dvc").strip()
         if status == "Data and pipelines are up to date.":
             DATA_UTILS_LOGGER.info("Data and pipelines are up to date.")
             return
         commit_to_dvc(dvc_raw_data_folder, dvc_remote_name)
     except CalledProcessError:
+        print("Data and pipelines are up to date.")
         commit_to_dvc(dvc_raw_data_folder, dvc_remote_name)
