@@ -1,8 +1,8 @@
 [core]
     analytics = false
     autostage = true
-    remote = gsremote_actual
-['remote "cybulde-data"']
-    url = gdrive://1BM3pbLCrJ-MQRL92mT_ZC9tHDZH403ox
-['remote "gsremote_actual"']
-    url = ../gs:/cybulde-tremoco-data
+    remote = gsremote
+['remote "gsremote"']
+    url = gs://cybulde-tremoco-data
+['remote "local_remote"']
+    url = /dvc_local/
