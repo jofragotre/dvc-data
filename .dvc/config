@@ -4,5 +4,3 @@
     remote = gsremote
 ['remote "gsremote"']
     url = gs://cybulde-tremoco-data
-['remote "local_remote"']
-    url = /dvc_local/
